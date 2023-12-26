@@ -31,5 +31,12 @@ public class LinkedList<T> {
         }
         System.out.println("null");
     }
+    
+
+    void deleteFirst(){
+        Node<T> tmp=head;
+        head=head.next;
+        
+    }
 
 }
