@@ -16,10 +16,12 @@ public class LinkedList<T> {
         if (head == null)
             head = newNode;
         else {
-            Node<T> tmp = head;
-            while (tmp.next != null)
-                tmp = tmp.next;
-            tmp.next = newNode;
+            // Node<T> tmp = head;
+            // while (tmp.next != null)
+            //     tmp = tmp.next;
+            // tmp.next = newNode;
+            newNode.next=head;
+            head=newNode;
         }
     }
 

@@ -6,10 +6,10 @@ public class Main {
         System.out.println("Welcome to linked list problem");
 
         LinkedList<Integer> integerLinkedList = new LinkedList<>();
-        
-        integerLinkedList.addData(56);
-        integerLinkedList.addData(30);
+
         integerLinkedList.addData(70);
+        integerLinkedList.addData(30);
+        integerLinkedList.addData(56);
 
         integerLinkedList.display();
     }
