@@ -32,11 +32,22 @@ public class LinkedList<T> {
         System.out.println("null");
     }
     
-
-    void deleteFirst(){
+    public void search(T data)
+    {
         Node<T> tmp=head;
-        head=head.next;
-        
+        while(tmp!=null)
+        {
+            if(tmp.data==data)
+            {
+                System.out.println("element " + data + " is present in it");
+                break;
+            }
+            tmp=tmp.next;
+        }
+
+        if(tmp==null)
+            System.out.println("element "+ data + " is not present in it");
     }
+    
 
 }

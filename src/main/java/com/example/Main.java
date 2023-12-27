@@ -11,8 +11,7 @@ public class Main {
         integerLinkedList.addData(30);
         integerLinkedList.addData(70);
 
-        integerLinkedList.deleteFirst();
-
+        integerLinkedList.search(30);
         integerLinkedList.display();
     }
 }
