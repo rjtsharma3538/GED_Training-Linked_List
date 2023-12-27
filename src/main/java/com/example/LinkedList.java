@@ -23,6 +23,31 @@ public class LinkedList<T> {
         }
     }
 
+    public void deleteKey(T key)
+    {
+        Node<T> p=head,q=head.next;
+        if(p.data==key)
+            p=p.next;
+        else 
+        {
+            while(q!=null)
+            {
+                if(q.data==key)
+                {
+                    p.next=q.next;
+                    q=p.next;
+                    break;
+                }
+                else 
+                {
+                    p=p.next;
+                    q=q.next;
+                }
+                
+            }
+        }
+    }
+
     public void display() {
         Node<T> tmp = head;
         while (tmp != null) {

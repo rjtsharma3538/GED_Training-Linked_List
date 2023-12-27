@@ -9,8 +9,14 @@ public class Main {
         
         integerLinkedList.addData(56);
         integerLinkedList.addData(30);
+        integerLinkedList.addData(40);
         integerLinkedList.addData(70);
 
+        System.out.println("Linked list before deletion");
+        integerLinkedList.display();
+
+        integerLinkedList.deleteKey(40);
+        System.out.println("Linked list after deletion");
         integerLinkedList.display();
     }
 }
