@@ -32,4 +32,23 @@ public class LinkedList<T> {
         System.out.println("null");
     }
 
+    public void insertAfterK(T key, T K)
+    {
+        Node<T> p=head;
+        Node<T> t=new Node<T>(key);
+
+        while (p!=null) {
+            if(p.data==K)
+            {
+                t.next=p.next;
+                p.next=t;
+                break;
+            }
+            p=p.next;
+        }
+
+        if(p==null)
+            System.out.println("element " + K +" is not found and hence we can't insert");
+    }
+
 }

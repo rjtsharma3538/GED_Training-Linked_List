@@ -7,10 +7,16 @@ public class Main {
 
         LinkedList<Integer> integerLinkedList = new LinkedList<>();
         
+        
         integerLinkedList.addData(56);
         integerLinkedList.addData(30);
         integerLinkedList.addData(70);
+        System.out.println("linked list before insertion");
+        integerLinkedList.display();
 
+
+        integerLinkedList.insertAfterK(40, 30);
+        System.out.println("linked list after insertion");
         integerLinkedList.display();
     }
 }
