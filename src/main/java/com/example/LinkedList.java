@@ -1,6 +1,7 @@
 package com.example;
+import  java.util.*;
 
-public class LinkedList<T> {
+public class LinkedList<T extends Comparable<T>> {
     Node<T> head;
 
     public LinkedList() {
@@ -20,6 +21,37 @@ public class LinkedList<T> {
             while (tmp.next != null)
                 tmp = tmp.next;
             tmp.next = newNode;
+        }
+    }
+
+    public void inserInSorted(T key)
+    {
+        Node<T> newNode = new Node<>(key);
+        if(head==null)
+            head=newNode;
+        
+        else if(key.compareTo(head.data)<0)
+        {
+            newNode.next=head;
+            head=newNode;
+        }
+        else 
+        {
+            Node<T> p=head,q=head.next;
+            while(q!=null)
+            {
+                if(key.compareTo(q.data)<0)
+                {
+                    p.next=newNode;
+                    newNode.next=q;
+                    break;
+                }
+                p=p.next;
+                q=q.next;
+            }
+
+            if(q==null)
+                p.next=newNode;
         }
     }
 

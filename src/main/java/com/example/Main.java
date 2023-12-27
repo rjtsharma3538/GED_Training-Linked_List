@@ -7,9 +7,12 @@ public class Main {
 
         LinkedList<Integer> integerLinkedList = new LinkedList<>();
         
-        integerLinkedList.addData(56);
-        integerLinkedList.addData(30);
-        integerLinkedList.addData(70);
+        integerLinkedList.inserInSorted(56);
+        integerLinkedList.inserInSorted(30);
+        integerLinkedList.inserInSorted(70);
+        integerLinkedList.inserInSorted(3);
+        integerLinkedList.inserInSorted(45);
+        integerLinkedList.inserInSorted(7);
 
         integerLinkedList.display();
     }
