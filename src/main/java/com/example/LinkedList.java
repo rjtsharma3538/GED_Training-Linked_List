@@ -23,6 +23,18 @@ public class LinkedList<T> {
         }
     }
 
+    public void deleteLast(){
+        if(head == null || head.next==null)
+            head=null;
+        else 
+        {
+            Node<T> tmp=head;
+            while(tmp.next.next!=null)
+                tmp=tmp.next;
+            tmp.next=null;
+        }
+    }
+
     public void display() {
         Node<T> tmp = head;
         while (tmp != null) {
